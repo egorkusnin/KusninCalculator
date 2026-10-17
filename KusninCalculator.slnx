@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="KushninCalculatorLib/KushninCalculatorLib.csproj" />
+  <Project Path="KushninCalculatorTests/KushninCalculatorTests.csproj" />
+  <Project Path="KushninCalculatorWPF/KushninCalculatorWPF.csproj" />
+  <Project Path="KusninCalculator/KusninCalculator.csproj" />
+</Solution>

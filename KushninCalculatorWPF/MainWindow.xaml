@@ -1,0 +1,46 @@
+﻿<Window x:Class="KushninCalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="KushninCalculator" Height="350" Width="320"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Калькулятор"
+                   FontSize="20" FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Число A:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TxtA" Margin="5" Padding="3"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Число B:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TxtB" Margin="5" Padding="3"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Операция (+, -, *, /, ^):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="TxtOp" Margin="5" Padding="3"/>
+
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Content="Вычислить"
+                Margin="0,15,0,5" Padding="5"
+                Click="BtnCalculate_Click"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Результат:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="5" Grid.Column="1" x:Name="TxtResult"
+                 Margin="5" Padding="3" IsReadOnly="True"/>
+
+        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" x:Name="TxtError"
+                   Foreground="Red" Margin="0,10,0,0" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
